@@ -1,0 +1,39 @@
+{
+  "transport": {
+    "mode": "stdio",
+    "host": "127.0.0.1",
+    "port": 3333,
+    "path": "/mcp",
+    "httpsKey": "/path/to/key.pem",
+    "httpsCert": "/path/to/cert.pem"
+  },
+  "logging": {
+    "enabled": true,
+    "path": "logs/mcplogview-server.log",
+    "selfSourceId": "mcplogview-self",
+    "selfSourceLabel": "MCP Server Self Log"
+  },
+  "skillsDir": "config/log-skills",
+  "sources": [
+    {
+      "type": "local",
+      "id": "app",
+      "label": "Application Log",
+      "path": "/var/log/myapp/app.log",
+      "description": "Main backend service log",
+      "hint": "Start here for backend API runtime errors."
+    },
+    {
+      "type": "ssh",
+      "id": "prod-api",
+      "label": "Prod API Log",
+      "host": "10.0.0.12",
+      "port": 22,
+      "user": "ubuntu",
+      "identityFile": "/Users/you/.ssh/id_ed25519",
+      "strictHostKeyChecking": false,
+      "path": "/var/log/myapp/api.log",
+      "description": "Remote log over SSH"
+    }
+  ]
+}

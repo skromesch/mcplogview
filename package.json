@@ -1,0 +1,29 @@
+{
+  "name": "mcp-logviewer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "portable:bundle": "node scripts/portable/build-entry.mjs",
+    "portable:build": "node scripts/portable/build-portable.mjs",
+    "portable:build:raspi": "bash scripts/portable/build-portable-docker.sh",
+    "portable:verify": "node scripts/portable/verify-portable.mjs",
+    "portable:checksums": "node scripts/portable/checksums.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "esbuild": "^0.27.0",
+    "postject": "^1.0.0-alpha.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

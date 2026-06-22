@@ -1,0 +1,12 @@
+node_modules/
+docs/
+dist/
+dist/portable/
+/logs/
+coverage/
+.env
+.codex/
+*.log
+config/certs/
+config/log-sources.json
+scripts/logs/
