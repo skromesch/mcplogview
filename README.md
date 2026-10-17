@@ -1,3 +1,18 @@
+> [!WARNING]
+> **This project is deprecated and no longer maintained.**
+> It has been replaced by **[mcplogview-go](https://github.com/skromesch/mcplogview-go)**: a single static binary
+> (no Node.js needed) with an interactive setup, Docker container logs as a source, per-source on/off switches with
+> live reload, a token-protected HTTP mode and a ready-made Docker Compose setup.
+>
+> ```bash
+> brew install --cask skromesch/tap/mcplogview
+> # or
+> curl -fsSL https://raw.githubusercontent.com/skromesch/mcplogview-go/main/install.sh | sh
+> ```
+>
+> See the [documentation](https://github.com/skromesch/mcplogview-go#readme). This repository is archived and
+> stays online for reference only.
+
 # mcplogview
 
 General MCP logviewer server for exposing configured log files as MCP tools.
